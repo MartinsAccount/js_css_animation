@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222233;
+}
+
+#root {
+    h1,
+    p {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 48px;
+        font-family: "Poppins", sans-serif;
+        color: #aaccff;
+    }
+
+    h1 {
+        font-weight: 900;
+    }
+    p {
+        font-weight: 100;
+    }
+
+    /* Azért kell az "&" jel mert azt jelzi hogy a root kapja meg a clicked classt */
+    &.clicked {
+        h1 {
+            animation: rotate;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-duration: 3s;
+        }
+        p {
+            animation: rotate;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        /* Egyik tarnsorm feülírja a másikat ezért kell újra beírni ezeket */
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}

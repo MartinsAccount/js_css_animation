@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #222233;
+}
+
+#root {
+  /* Azért kell az "&" jel mert azt jelzi hogy a root kapja meg a clicked classt */
+}
+
+#root h1,
+#root p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-family: "Poppins", sans-serif;
+  color: #aaccff;
+}
+
+#root h1 {
+  font-weight: 900;
+}
+
+#root p {
+  font-weight: 100;
+}
+
+#root.clicked h1 {
+  -webkit-animation: rotate;
+          animation: rotate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+#root.clicked p {
+  -webkit-animation: rotate;
+          animation: rotate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    /* Egyik tarnsorm feülírja a másikat ezért kell újra beírni ezeket */
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+            transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    /* Egyik tarnsorm feülírja a másikat ezért kell újra beírni ezeket */
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+            transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
