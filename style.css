@@ -21,6 +21,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
   font-size: 48px;
   font-family: "Poppins", sans-serif;
   color: #aaccff;
